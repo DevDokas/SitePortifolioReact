@@ -1,0 +1,27 @@
+.screen{
+    position: absolute;
+    background-color: #2D0922;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 62vh;
+    width: 48vw;
+    top: 51.5vh;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.DevDokasParagraph{
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+
+.TextColorOne {
+    color: #4e9906;
+}
+
+.TextColorTwo {
+    color: #345e9e;
+}
+
