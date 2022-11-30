@@ -7,8 +7,7 @@ import Home from './pages/pageHome/pageHome.jsx'
 import About from  './pages/pageAbout/pageAbout.jsx'
 import Profile from './pages/pageProfile/pageProfile.jsx'
 import Login from './pages/pageLogin/pageLogin.jsx'
-
-import './App.css'
+import Register from './pages/pageRegister/pageRegister.jsx'
 
 
 export default function App() {
@@ -23,6 +22,8 @@ export default function App() {
         <Route path='/profile' element={<Profile/>} />
         {/* Login */}
         <Route path='/login' element={<Login/>} />
+        {/* Register */}
+        <Route path='/register' element={<Register/>} />
       </Routes>
     </BrowserRouter>
   )
