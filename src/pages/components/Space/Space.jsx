@@ -7,7 +7,16 @@ import star from '../../../assets/star.png'
 import './styles/style.css'
 
 function Points() {
+    return(
+        <points>
+            <bufferGeometry attach='geometry'>
 
+            </bufferGeometry>
+            <pointsMaterial
+                attach="material"
+            />
+        </points>
+    )
 }
 
 function AnimationCanvas(){

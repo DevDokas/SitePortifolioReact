@@ -8,6 +8,7 @@ function Points() {
 }
 
 function AnimationCanvas(){
+    return
 
 }
 
