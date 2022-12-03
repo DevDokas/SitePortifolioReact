@@ -21,8 +21,9 @@ export default function Home() {
 function HomeApp() {
     return(
         <>
-        <Nav />
+        
         <video src={BackgroundVideo} autoPlay loop muted></video>
+        <Nav />
         <div className="screen">
             <p className="DevDokasParagraph"><span className="TextColorOne">devdokas@devdokas-linux</span>:<span className="TextColorTwo">~</span>$</p>
         </div>    
