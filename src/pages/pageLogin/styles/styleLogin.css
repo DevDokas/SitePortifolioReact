@@ -1,88 +1,22 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
-    align-content: center;
+.container{
+    width: fit-content;
     display: flex;
-    justify-content: center;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 500px;
+    height: 450px;
+    border-radius: 50px 0 0 50px;
 }
 
 form {
-    background-color: #3A668B;
-    color: #060912;
-    height: 625px;
-    width: 650px;
-    border-radius: 50px;
+    width: 500px;
+    height: 450px;
+    border-radius: 0 50px 50px 0;
+    background-color: aliceblue;
 }
 
-form a {
-    height: 150px;
-    width: 150px;
-    margin-top: 25px;
-}
 
-form a img {
-    height: 150px;
-    width: 150px;
-    margin-top: 25px;
-}
-
-.Div{
-    margin-top: 25px;
-    height: 120px;
-    width: 350px;
-}
-
-label{
-    display: block;
-    width: 350px;
-    height: 30px;
-}
-
-.Div label{
-    font-size: 32px;
-    width: 350px;
-    height: 30px;
-    transform: translate(45%, 0);
-}
-
-.Div input{
-    text-align: center;
-    font-size: 26px;
-    transform: translate(45%, 0);
-    padding: 0;
-    height: 60px;
-    width: 350px;
-    border: 0;
-    border-radius: 30px;
-    background-color: #eee;
-    color: #060912;
-}.Div input:not(:placeholder-shown) {
-    background-color: #eee;
-}
-
-.DivButton{
-    margin-top: 55px;
-    padding: 0 70px 0 70px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.Button{
-    background-color: #295174;
-    color: #060912;
-    font-size: 32px;
-    padding: 10px;
-}
-
-.LoginButton {
-    height: 70px;
-    width: 200px;
-}
-
-.RegisterButton{
-    height: 70px;
-    width: 200px;
-}
-
+/* .Div input:not(:placeholder-shown) */

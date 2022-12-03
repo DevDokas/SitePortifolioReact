@@ -4,8 +4,8 @@ nav{
     transform: translate(-50%, 0);
     top: 30px;
     left: 50%;
-    width: 1200px;
-    height: 120px;
+    width: 70rem;
+    height: 7rem;
     border-radius: 50px;
     background-color: #3A668B;
     display: flex;
@@ -34,7 +34,7 @@ nav ul li:hover {
 
 nav .logo {
     transform: translate(-50%, 0);
-    margin: 10px 0 0 120px;
+    margin: 0.3rem 0 0 120px;
     padding: 0;
     height: 100px;
     width: 100px;

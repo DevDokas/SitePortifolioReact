@@ -1,15 +1,14 @@
 import React from "react";
 
-import Logo from '../../assets/logo.png'
+import Coding from '../../assets/coding.jpg'
 import './styles/styleLogin.css'
 
 export default function Login() {
     return (
         <>
+        <div className="container">
+        <img src={Coding} alt="" />
         <form action="#">
-            <a href="/">
-                <img src={Logo} alt="" />
-            </a>
             <div className="Div DivUser">
                 <label htmlFor="user">Usuário:</label> <br />
                 <input type="text" id="user"/>
@@ -20,9 +19,10 @@ export default function Login() {
             </div>
             <div className="DivButton">
                 <button className="Button LoginButton">Login</button>
-                <button className="Button RegisterButton">Registrar</button>
+                <a href="/register" className="Button RegisterButton">Registrar</a>
             </div>
         </form>
+        </div>
         </>
     )
 }
