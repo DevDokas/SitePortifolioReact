@@ -8,6 +8,7 @@ export default function About() {
     return(
         <React.StrictMode>
             <Nav />
+            <h1 className="h1test">Sobre</h1>
         </React.StrictMode>
     )
 }

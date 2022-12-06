@@ -1,25 +1,30 @@
 import React from "react";
+import Nav from "../components/Nav/Nav.jsx"
 
-import Coding from '../../assets/coding.jpg'
+import Coding from '../../assets/pcside.png'
 import './styles/styleLogin.css'
 
 export default function Login() {
     return (
         <>
+        <Nav />
         <div className="container">
-        <img src={Coding} alt="" />
-        <form action="#">
+        <div className="imgDiv">
+            <img className="imgLogin" src={Coding} alt="" />
+        </div>
+        <form className="FormLogin" action="#">
             <div className="Div DivUser">
-                <label htmlFor="user">Usuário:</label> <br />
-                <input type="text" id="user"/>
+                <input type="text" id="user" placeholder="Usuário: "/>
             </div>
             <div className="Div DivPassword">
-                <label htmlFor="password">Senha:</label> <br />
-                <input type="password" id="password" />
+                <input type="password" id="password"  placeholder="Senha: "/>
             </div>
             <div className="DivButton">
                 <button className="Button LoginButton">Login</button>
-                <a href="/register" className="Button RegisterButton">Registrar</a>
+                <div className="DivText">
+                    <p>Ainda não se registrou? </p>
+                    <a href="/register" className="RegisterButton"> Registrar agora!</a>
+                </div>
             </div>
         </form>
         </div>

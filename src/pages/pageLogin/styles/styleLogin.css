@@ -1,22 +1,105 @@
-.container{
-    width: fit-content;
-    display: flex;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 0;
+    -webkit-text-fill-color: #060912;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
-img {
-    width: 500px;
-    height: 450px;
+
+/* Container */
+.container{
+    position: absolute;
+    width: fit-content;
+    display: flex;
+    width: 400px;
+    height: 350px;
+    top: 30%;
+    left: 50%;
+    margin-left: -400px;
+}
+
+/* Imagem */
+.imgDiv{
+    background-color: #4380b0;
+    width: 400px;
+    height: 350px;
     border-radius: 50px 0 0 50px;
 }
 
-form {
-    width: 500px;
-    height: 450px;
-    border-radius: 0 50px 50px 0;
-    background-color: aliceblue;
+.imgLogin {
+    padding-left:30px;
+    height: 350px;
 }
 
+/* Formulário */
+.FormLogin {
+    width: 400px;
+    height: 350px;
+    border-radius: 0 50px 50px 0;
+    background-color: #4380b0;
+}
 
+input{
+    border: 0;
+    background-color: white;
+    color: #060912;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Cascadia Code';
+}
+
+.RegisterButton{
+    text-decoration: none;
+    color: #172a41;
+}.RegisterButton:hover{
+    color: #060912;
+    font-size: 0.6vw;
+}
+
+.Button {
+    background-color: #172a41;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid #172a41;
+    padding: 10px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500px;
+}.Button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.DivUser{
+    margin-top: 23%;
+    margin-bottom: 15px;
+}
+
+/* .Div{
+    margin-top: 15px;
+} */
+
+.DivButton{
+    padding: 30px 0 30px 0;
+}
+
+.DivText{
+    display: flex;
+    font-size: 10px;
+    width: 400px;
+    justify-content: space-between;
+    padding: 10px 78px 0 78px;
+}
 /* .Div input:not(:placeholder-shown) */

@@ -4,8 +4,8 @@ nav{
     transform: translate(-50%, 0);
     top: 30px;
     left: 50%;
-    width: 70rem;
-    height: 7rem;
+    width: 70vw;
+    height: 10vh;
     border-radius: 50px;
     background-color: #3A668B;
     display: flex;
@@ -19,13 +19,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 30px 0 0 0;
     padding: 0 50px 0 50px;
     font-size: 28px;
 }
 
 nav a {
     color: #060912;
+    text-decoration: none;
 }
 
 nav ul li:hover {
@@ -36,14 +36,32 @@ nav .logo {
     transform: translate(-50%, 0);
     margin: 0.3rem 0 0 120px;
     padding: 0;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 
 nav .profile {
     transform: translate(-50%, 0);
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 10px 0;
     padding: 0;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+}nav .profile:hover{
+    filter: drop-shadow(0 0 2em #4380b0);
+}nav .profile.react:hover {
+    filter: drop-shadow(0 0 2em #4380b0);
+}
+
+
+/* Logo */
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #4380b0);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #4380b0);
 }

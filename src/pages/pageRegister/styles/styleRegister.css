@@ -1,0 +1,44 @@
+.FormRegister{
+    margin-top: 100px;
+    background-color:  #4380b0;
+    height: 650px;
+    width: 400px;
+    border-radius: 0 50px 50px 0;
+}
+
+.imgDivReg {
+    margin-top: 100px;
+    background-color: #4380b0;
+    height: 650px;
+    width: 400px;
+    border-radius: 50px 0 0 50px;
+}
+
+.imgReg{
+    margin-top: 20%;
+    padding: 0 0 0 30px;
+    height: 350px;
+}
+
+.DivNome{
+    padding: 25px 0 0 0;
+}
+
+.ButtonReg{
+    margin: 25px;
+}
+
+select {
+    border: 0;
+    background-color: white;
+    color: #060912;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Cascadia Code';
+}
+
+label{
+    color: #060912;
+    font-weight: 300;
+}
