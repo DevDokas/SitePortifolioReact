@@ -1,11 +1,31 @@
+//React & Etc
 import React from "react";
+// eslint-disable-next-line no-unused-vars
+import { useState } from "react";
+import { Form, Formik, Field, ErrorMessage } from "formik";
+import * as yup from "yup"
 
+//Componentes
 import Nav from "../components/Nav/Nav";
 
+//Estilização
 import './styles/styleRegister.css'
 import CodingImage from '../../assets/pcside.png'
 
+
 export default function Register(){
+    
+    const handleClickRegister = (values) => console.log(values)
+    
+    const validationRegister = yup.object().shape({
+        nome: yup.string().required("Preencha seu nome"),
+        sobrenome: yup.string().required("Preencha seu sobrenome"),
+        email:yup.string().email("Digite um email valido.").required("email requerido para realizar o cadastro."),
+        password: yup.string().min(8, "Mínimo de 8 dígitos").max(50, "Máximo de 50 dígitos").required(),
+        confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas precisam ser iguais").required()
+        
+    })
+
     return(
         <>
         <Nav />
@@ -13,85 +33,68 @@ export default function Register(){
         <div className="imgDivReg">
             <img className="imgReg" src={CodingImage} alt="" />
         </div>
-        <div>
-            <form className="FormRegister" action="#">
-                <div className="DivNome">
-                    <label  htmlFor="nome">Nome:</label> <br/>
-                    <input  name="nome" id="nome" type="text"/>
+        <Formik
+            initialValues={{}}
+            onSubmit={handleClickRegister}
+            validationSchema={validationRegister}>
+            <div>
+            <Form className="register-form">
+                <div className="register-form-group">
+                    <label htmlFor="name">Nome: </label> <br/>
+                    <Field name="name" id="name" className="form-field"/>
+                    <br />
+                    <ErrorMessage
+                        component="span"
+                        name="name"
+                        className="form-error"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="">Sobrenome: </label> <br />
-                    <input type="text" />
+                <div className="register-form-group">
+                    <label htmlFor="lastname">Sobrenome: </label> <br />
+                    <Field name="lastname" id="lastname" className="form-field"/>
+
+                    <ErrorMessage
+                        component="span"
+                        name="lastname"
+                        className="form-error"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="sexo">Sexo: </label> <br />
-                    <select name="sexo" id="sexo">
-                        <option value={true} data-default="" disabled={true} selected={true} />
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outro">Outro</option>
-                    </select>
+                <div className="register-form-group">
+                    <label htmlFor="email">Email: </label> <br />
+                    <Field type="email" name="email" id="email" className="form-field"/>
+                    <br />
+                    <ErrorMessage
+                        component="span"
+                        name="email"
+                        className="form-error"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="">Data de Nascimento: </label> <br />
-                    <input type="date" name="nascdata" id="nascdata" />
+                <div className="register-form-group">
+                    <label htmlFor="password">Senha: </label> <br />
+                    <Field name="password" id="password" className="form-field"/>
+                    <br />
+                    <ErrorMessage
+                        component="span"
+                        name="password"
+                        className="form-error"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="">Email: </label> <br />
-                    <input type="email" name="email" id="email" />
+                <div className="register-form-group">
+                    <label htmlFor="conf-password">Confirmar senha: </label> <br />
+                    <Field name="conf-password" id="conf-password" className="form-field"/>
+                    <br />
+                    <ErrorMessage
+                        component="span"
+                        name="conf-password"
+                        className="form-error"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="cep">CEP: </label> <br />
-                    <input type="number" name="cep" id="cep" maxLength={8}/>
+                <div className="DivButton">
+                    <button className="button Button" type="submit">Registrar</button>
                 </div>
-                <div>
-                    <label htmlFor="">Estado: </label> <br />
-                    <select id="estado" name="estado">
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
-                    </select>
-                </div>
-                <div>
-                    <label htmlFor="">Cidade: </label> <br />
-                    <input type="text" />
-                </div>
-                <div>
-                    <label htmlFor="endereço">Endereço: </label> <br />
-                    <input type="text" />
-                </div>
-                <div>
-                    <label htmlFor="complemento">Complemento: </label> <br />
-                    <input type="text" />
-                </div>
-                <button className="Button ButtonReg">Enviar</button>
-            </form>
-        </div>
+            </Form>
+            </div>
+        </Formik>
         </div>
         </>
     )

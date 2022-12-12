@@ -1,0 +1,33 @@
+{
+    "cSpell.words": [
+        "nascdata"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "db-devdokas-site-aws.cey2k6hfotaw.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "AWS",
+            "username": "admin",
+            "password": "L166teamo",
+            "database": "test"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "us-cdbr-east-06.cleardb.net",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Heroku",
+            "database": "heroku_789c700a2a4e807",
+            "username": "bbe9e970640d9b",
+            "password": "b67053eb"
+        }
+    ]
+}
