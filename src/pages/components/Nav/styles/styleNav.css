@@ -7,7 +7,8 @@ nav{
     width: 70vw;
     height: 10vh;
     border-radius: 50px;
-    background-color: #3A668B;
+    background-color: rgb(237, 237, 237);
+    opacity: 55%;
     display: flex;
 }
 
